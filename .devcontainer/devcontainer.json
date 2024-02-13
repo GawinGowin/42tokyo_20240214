@@ -1,0 +1,32 @@
+{
+	"name": "react",
+	"build": {
+	  "dockerfile": "../Dockerfile",
+	  "target": "dev"
+	},
+	"runArgs": [
+		"-it", "--rm",
+		"--name", "42-front"
+	],
+	"workspaceFolder": "/app",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
+	"mounts": [
+		{ "source": "node_modules", "target": "/app/node_modules", "type": "volume" }
+	],
+	
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"kube.42header",
+				"mhutchie.git-graph",
+				"GitHub.copilot"
+			],
+			"settings": {
+				"42header.email": "saraki@student.42tokyo.jp",
+				"42header.username": "saraki",
+				"github.copilot.chat.localeOverride": "en"
+			}
+		}
+	}
+}

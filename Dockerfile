@@ -1,5 +1,5 @@
 # ベースイメージを指定
-FROM node:20.5.0
+FROM node:20.5.0 as dev
 
 # 作業ディレクトリを設定
 WORKDIR /app
@@ -12,7 +12,10 @@ RUN npm install
 RUN npm install @rollup/rollup-linux-x64-gnu
 
 # アプリケーションのソースコードをコピー
-COPY . .
 
+FROM node:18-alpine as prod
+WORKDIR /app
+
+COPY --from=dev /app /app
 # アプリケーションを起動
 CMD ["npm", "start"]
