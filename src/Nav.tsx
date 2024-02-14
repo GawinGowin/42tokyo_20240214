@@ -8,7 +8,11 @@ function ResponsiveAppBar() {
     <AppBar position="static" style={{ background: '#FFFFFF' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <button><img src="https://d2w53g1q050m78.cloudfront.net/futsunoshop/uploads/assets/images/futu_shop_logo.svg" /></button>
+          <button>
+            <a href='https://futsuno.shop/'>
+              <img src="https://d2w53g1q050m78.cloudfront.net/futsunoshop/uploads/assets/images/futu_shop_logo.svg" />
+            </a>
+          </button>
         </Toolbar>
       </Container>
     </AppBar>
