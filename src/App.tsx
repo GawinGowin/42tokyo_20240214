@@ -4,11 +4,13 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Privacy from './Privacy';
 import Products from './Products';
+import ResponsiveAppBar from './Nav';
 
 function App() {
   return (
     <Router>
       <div>
+        <ResponsiveAppBar/>
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/privacy" element={<Privacy />} />
