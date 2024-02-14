@@ -9,13 +9,13 @@ function App() {
   return (
     <Router>
       <div>
-        <nav style={{ 'borderBottom': '1px solid', 'marginBottom': '20px' }}>
-          <Link to="/">ホーム</Link> | <Link to="/privacy">プライバシーポリシー</Link>
-        </nav>
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
+        <nav style={{ 'borderBottom': '1px solid', 'marginBottom': '20px' }}>
+          <Link to="/">ホーム</Link> | <Link to="/privacy">プライバシーポリシー</Link>
+        </nav>
       </div>
     </Router>
   );
