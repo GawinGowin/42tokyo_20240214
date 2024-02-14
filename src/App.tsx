@@ -16,7 +16,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <nav style={{ 'borderBottom': '1px solid', 'marginBottom': '20px' }}>
-          <Link to="/">ホーム</Link> | <Link to="/privacy">プライバシーポリシー</Link>
+          <Link to="/privacy">プライバシーポリシー</Link>
         </nav>
       </div>
     </Router>
