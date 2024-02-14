@@ -35,7 +35,7 @@
 
 .product-price::before {
   content: "¥";
-  font-size: 12px;
+  font-size: 10px;
   margin-right: 4px;
 }
 
